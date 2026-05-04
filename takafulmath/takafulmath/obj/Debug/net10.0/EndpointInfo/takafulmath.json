@@ -1,0 +1,67 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "takafulmath | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:7213"
+    },
+    {
+      "url": "http://localhost:5176"
+    }
+  ],
+  "paths": {
+    "/api/formula": {
+      "post": {
+        "tags": [
+          "takafulmath"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MathInputDTO"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "MathInputDTO": {
+        "required": [
+          "alphaNum1",
+          "alphaNum2",
+          "operator"
+        ],
+        "type": "object",
+        "properties": {
+          "alphaNum1": {
+            "type": "string"
+          },
+          "alphaNum2": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "takafulmath"
+    }
+  ]
+}

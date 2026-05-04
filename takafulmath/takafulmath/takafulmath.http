@@ -1,0 +1,15 @@
+@takafulmath_HostAddress = https://localhost:7213
+
+GET {{takafulmath_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+POST {{takafulmath_HostAddress}}/api/formula
+Content-Type: application/json
+
+{
+  //MathInputDTO
+}
+
+###
